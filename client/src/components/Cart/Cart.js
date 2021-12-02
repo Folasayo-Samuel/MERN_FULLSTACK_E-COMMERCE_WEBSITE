@@ -12,7 +12,7 @@ import {
 } from "reactstrap";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { getCart, deleteFromCart } from "../../actions/orderActions";
+import { getCart, deleteFromCart } from "../../actions/cartActions";
 import Checkout from "../Checkout/Checkout";
 import { checkout } from "../../actions/orderActions";
 

@@ -31,6 +31,15 @@ export const deleteFromCart = (userId, itemId) => (dispatch) => {
     );
 };
 
+export const addToCart = (userId, itemId) => (dispatch) => {
+  axios.post(`/api/cart/${userId}/${itemId}`).then((res) =>
+    dispatch({
+      type: ADD_TO_CART,
+      payload: res.data,
+    })
+  );
+};
+
 export const setCartLoading = () => {
   return {
     type: CART_LOADING,
